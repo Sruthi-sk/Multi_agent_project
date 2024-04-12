@@ -16,7 +16,8 @@ pip install -r requirements.txt
 Then, install the gym environment from any folder:
 
 ```
-cd multiple agents
+cd multiple_agents
+cd gym-rili
 pip install -e .
 cd ..
 ```
