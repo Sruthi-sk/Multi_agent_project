@@ -93,9 +93,9 @@ for i_episode in range(1, args.num_eps+1):
     if i_episode < args.start_eps:
         action_agent_other = env.action_space_other.sample()
     else:
-        print('select action:',state_other,last_state_ego)
+        # print('select action:',state_other,last_state_ego)
         action_agent_other = agent_other.select_action(state_other,last_state_ego)
-    print('Episode ',i_episode)
+    # print('Episode ',i_episode)
     while not done:
         if i_episode < args.start_eps:
             action_agent_ego = env.action_space.sample()
@@ -128,7 +128,7 @@ for i_episode in range(1, args.num_eps+1):
     # after while loop
     if len(memory_agent_other) > args.batch_size_SAC:
         if np.random.random() > args.change_partner:
-            print('Changed partner: update sac')
+            # print('Changed partner: update sac')
             for i in range(args.updates_per_step):
                 # Update parameters of all the networks
                 critic_1_loss, critic_2_loss, policy_loss = agent_other.update_parameters(memory_agent_other, args.batch_size_SAC, updates)
@@ -145,8 +145,7 @@ for i_episode in range(1, args.num_eps+1):
     #memory_agent_other.push()
     writer.add_scalar('reward/episode_reward', episode_reward_ego, i_episode)
     writer.add_scalar('reward/episode_reward_SAC', episode_reward_other, i_episode)
-    print("Episode: {}, partner: {}, reward for Ego/RILI/Seeker: {}".format(i_episode, env.partner, round(episode_reward_ego, 2)))
-    print("Hider Agent reward: {}".format( round(episode_reward_other, 2)))
+    print(f"Episode: {i_episode}, reward for RILI(Ego/Seeker): {round(episode_reward_ego, 2)}") #, reward for SAC Agent (Hider): {round(episode_reward_other, 2)}")
 
     if i_episode % 1000 == 0:
         agent_ego.save_model(args.save_name + '_' + str(i_episode))
