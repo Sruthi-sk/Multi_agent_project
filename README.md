@@ -5,3 +5,9 @@ This repository is for Accelerating Human-AI Co-adaptation. For initial setup re
 In this repository we include codes for the two strategies:
 - RILI vs SAC
 - Multiple Agents
+
+Codes for RILI vs SAC 
+
+
+Code files for Multiple Agents
+
