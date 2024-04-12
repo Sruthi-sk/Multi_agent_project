@@ -13,7 +13,7 @@ You can install the packages by running the following command
 pip install -r requirements.txt
 `
 
-Then, install the gym environment for Mutiple Agents 3 agents:
+Then, install the gym environment from any folder:
 
 ```
 cd multiple agents
@@ -34,7 +34,7 @@ cd ..
 ## Code files for Multiple Agents
 ### common subfolders
 #### algos
-- code for RILI taken from the above paper- 
+- code for RILI Agent
 ### 2_Agents
 - `main.py` : Contains code for pretraining the model with 2 agents
 - `maintest.py` : Contains code for testing the pre-trained model on circle environment
