@@ -6,6 +6,21 @@ In this repository we include codes for the two strategies:
 - RILI vs SAC
 - Multiple Agents
 
+## Instructions 
+You can install the packages by running the following command
+
+`
+pip install -r requirements.txt
+`
+
+Then, install the gym environment for Mutiple Agents 3 agents:
+
+```
+cd multiple agents
+pip install -e .
+cd ..
+```
+
 ## Codes for RILI vs SAC 
 
 
