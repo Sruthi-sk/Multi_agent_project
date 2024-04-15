@@ -17,7 +17,7 @@ Then, install the gym environment from any folder:
 
 ```
 cd multiple_agents
-cd 2_Agents
+cd 2Agents
 cd gym-rili
 pip install -e .
 cd ..
